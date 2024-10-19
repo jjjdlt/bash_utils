@@ -2,7 +2,8 @@
 miscellaneous bash scripts i've made while using linux
 ## tar unpackager script
 automated tar file unpackaging and desktop menu entry creation. can be used for initial installs and subsequent updates
-### filetypes supported: .tar, .tar.gz, .tar.bz2, 
+#### filetypes supported: [.tar, .tar.gz, .tar.bz2] 
+#### example script execution:
 ```bash
 ➜  ~ ./tar_dpkg.sh Downloads/code-stable-x64-1728492644.tar.gz 
 Starting installation/update process for Downloads/code-stable-x64-1728492644.tar.gz...
