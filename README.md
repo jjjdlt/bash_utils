@@ -20,5 +20,31 @@ Found named icon: /home/jj/Downloads/code-stable-x64-1728492644.tar/./VSCode-lin
 Creating/Updating a desktop entry for code...
 Desktop entry created/updated: /home/jj/.local/share/applications/code.desktop
 Application code installed/updated successfully!
+```
+## calendar script
+automated the display of date, time, and a dynamic reminder of the current day everytime a new shell session is started.
+#### example script execution:
 
+```bash
+---------------------------------------------
+                  calendar                   
+---------------------------------------------
+Today's Date: Monday, October 21, 2024
+Current Time: 01:23:00
+
+ ______________
+||            ||
+||            ||
+||            ||
+||            ||
+||____________||
+|______________|
+ \############\
+  \############\
+   \      ____    \   
+    \_____\___\____\CA15    
+--------------------------------------------
+ Reminders: cse310 hw03 | interview@1:00pm
+--------------------------------------------
+➜  ~ 
 ```
