@@ -21,6 +21,33 @@ Creating/Updating a desktop entry for code...
 Desktop entry created/updated: /home/jj/.local/share/applications/code.desktop
 Application code installed/updated successfully!
 ```
+to append an alias, be sure to add this to your shell config
+tar_dpkg() {
+    /PATH/TO/tar_dpkg.sh "$1"
+}
+then resource your .*rc file
+
+#### example script execution:
+```bash
+➜  ~ tar_dpkg Downloads/pycharm-community-2024.2.3.tar.gz 
+Starting installation/update process for Downloads/pycharm-community-2024.2.3.tar.gz...
+Creating/Updating target directory Downloads/pycharm-community-2024.2.3.tar...
+Cleaning up old files in Downloads/pycharm-community-2024.2.3.tar...
+Extracting Downloads/pycharm-community-2024.2.3.tar.gz...
+Extraction completed.
+Navigated into Downloads/pycharm-community-2024.2.3.tar.
+Searching for the first executable...
+Executable found: ./pycharm-community-2024.2.3/jbr/bin/java
+Parsed application name: pycharm
+Checking for an icon named after the application...
+Found named icon: /home/jj/Downloads/pycharm-community-2024.2.3.tar/./pycharm-community-2024.2.3/bin/pycharm.png
+Creating/Updating a desktop entry for pycharm...
+Desktop entry created/updated: /home/jj/.local/share/applications/pycharm.desktop
+Application pycharm installed/updated successfully!
+➜  ~ 
+
+```
+
 ## calendar script
 automated the display of date, time, and a dynamic reminder of the current day everytime a new shell session is started.
 #### example script execution:
