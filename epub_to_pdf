@@ -1,0 +1,37 @@
+```bash
+#!/bin/bash
+
+# Check if ebook-convert is installed
+if ! command -v ebook-convert &> /dev/null; then
+    echo "Calibre's ebook-convert tool is not installed. Please install Calibre to use this script."
+    exit 1
+fi
+
+# Check if the user provided input
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <epub_file1> <epub_file2> ... <epub_fileN>"
+    exit 1
+fi
+
+# Loop through all provided EPUB files
+for epub_file in "$@"; do
+    # Check if file exists
+    if [ ! -f "$epub_file" ]; then
+        echo "File $epub_file not found!"
+        continue
+    fi
+
+    # Extract the file name without the extension
+    base_name=$(basename "$epub_file" .epub)
+
+    # Convert the EPUB to PDF
+    ebook-convert "$epub_file" "$base_name.pdf"
+
+    # Check if conversion was successful
+    if [ $? -eq 0 ]; then
+        echo "Successfully converted $epub_file to $base_name.pdf"
+    else
+        echo "Failed to convert $epub_file"
+    fi
+done
+```
